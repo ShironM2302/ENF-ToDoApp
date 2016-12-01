@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <title>To Do List</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> </head>
+
+<body>
+    <header>
+        <input type="text" id="input" placeholder="Enter task here..">
+        <button id="addBtn"><i class="material-icons" id="plus">add</i></button>
+    </header>
+    <ul id="unchecked"></ul>
+    <footer>
+        <div id="info"><i class="material-icons">info_outline</i></div>
+        <div id="clear"><i class="material-icons">delete_sweep</i></div>
+        <div id="print"><i class="material-icons">print</i></div>
+    </footer>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"> <span class="close">×</span>
+                <h2>Information</h2> </div>
+            <div class="modal-body">
+                <h3>Welcome to ENF To-do app </h3>
+                <p>Just enter the task that you want to remember and the app will do the rest, even stores the information on the browser, so you can open it, close it and come back whenever you want. </p>
+                <p> Each item you enetered can be edited by clicking on the list, or deleted and checked by clicking on the buttons on the side. Also right at the bottom, hopefully after you checked all your tasks, you can delete all the tasks in one satisfying button</p>
+                <p> Don't forget to rate and leave feedback as we always strive to improve</p> <img class="logo" src="images/logo.png">
+                <!--logo made in http://www.onlinelogomaker.com/logomaker/#-->
+            </div>
+        </div>
+    </div>
+    <script src="myscript.js"></script>
+</body>
+
+</html>

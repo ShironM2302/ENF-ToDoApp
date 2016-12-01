@@ -1,0 +1,499 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+html,
+body {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background: #feffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #feffff 0%, #ddf1f9 20%, #a0d8ef 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #feffff 0%, #ddf1f9 20%, #a0d8ef 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #feffff 0%, #ddf1f9 20%, #a0d8ef 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+header {
+    width: 100%;
+    background-color: #1976D2;
+    height: 90px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 1px 4px #BDBDBD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 45px;
+    padding-left: 45px;
+    position: fixed;
+    z-index: 3;
+}
+
+header input {
+    width: 100%;
+    height: 44px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border: 0px;
+    ;
+    background-color: #2196F3;
+    float: left;
+    font-size: 1.2em;
+    text-indent: 15px;
+    color: #FFFFFF;
+    padding-right: 120px;
+    outline: none;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+
+/*Chrome/opera/safari*/
+
+::-webkit-input-placeholder {
+    color: #BBDEFB;
+    opacity: 1;
+}
+
+
+/*Firefox 19+ */
+
+::-moz-placeholder {
+    color: #BBDEFB;
+    opacity: 1;
+}
+
+
+/*IE10+ */
+
+:-ms-input-placeholder {
+    color: #BBDEFB;
+    opacity: 1;
+}
+
+
+/*Firefox 18+ */
+
+:-moz-placeholder {
+    color: #BBDEFB;
+    opacity: 1;
+}
+
+header button {
+    width: 50px;
+    height: 44px;
+    position: absolute;
+    right: 45px;
+    z-index: 2;
+    background-color: #FF4081;
+    border-radius: 25px;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    background: none;
+}
+
+header button #plus {
+    font-size: 40px;
+    color: white;
+}
+
+header button:hover {
+    background-color: #ff6b9d;
+}
+
+header button#setting {
+    font-size: 40px;
+    color: white;
+    float: right;
+}
+
+ul {
+    width: 100%;
+    float: left;
+    margin-top: 90px;
+    padding: 15px;
+    list-style: none;
+}
+
+ul li {
+    background-color: white;
+    margin: 10px;
+    box-shadow: 0px 1px 4px #BDBDBD;
+    height: 70px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    cursor: move;
+}
+
+ul li div {
+    overflow: hidden;
+    width: 80%;
+}
+
+ul li:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+
+[contenteditable="true"]:focus {
+    border: none;
+    outline: none;
+}
+
+ul li.addedItem {
+    opacity: 0;
+    animation: addItem .3s linear forwards;
+}
+
+@keyframes addItem {
+    from {
+        opacity: 0;
+        transform: translateY(-400px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ul li .btnGroup {
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+ul li .btnGroup button {
+    width: 50px;
+    height: 70px;
+    float: left;
+    background: none;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+}
+
+ul li .btnGroup button #delete {
+    width: 50px;
+    height: 70px;
+    float: left;
+    background: none;
+    border: 0px;
+    outline: none;
+    font-size: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #1976D2;
+}
+
+ul li .btnGroup button #delete:hover {
+    color: red;
+    transition: 0.4s ease;
+}
+
+ul li .btnGroup button #done {
+    width: 50px;
+    height: 70px;
+    float: left;
+    background: none;
+    border: 0px;
+    outline: none;
+    font-size: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #1976D2;
+}
+
+ul li .btnGroup button #done:hover {
+    color: green;
+    transition: 0.4s ease;
+}
+
+ul li.checked .btnGroup button #done {
+    width: 50px;
+    height: 70px;
+    float: left;
+    background: none;
+    border: 0px;
+    outline: none;
+    font-size: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: green;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    opacity: 1;
+    color:grey;
+    background-color: #333333 !important;
+}
+
+
+
+
+
+ul li span#times {
+    color: grey;
+    font-size: 0.72em;
+}
+
+
+
+.select {
+    outline: none;
+    border-radius: 10px;
+    float: left;
+    border: none;
+    padding-top: 3px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    color: grey;
+}
+
+select option{
+    background-color: #feffff;
+    color: grey;
+}
+
+ul li.checked .select {
+    text-decoration: line-through;
+    opacity: 2;
+    color: grey;
+    background-color: #333333;
+}
+
+ul li span.time {
+    color: grey;
+    font-size: 0.72em;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    height: 30px;
+    box-shadow: 0px 1px 4px #BDBDBD;
+    position: fixed;
+    z-index: 3;
+    bottom: 0px;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+footer div#info {
+    width: 33.33%;
+    float: left;
+    background-color: green;
+    height: 100%;
+}
+
+footer div#clear {
+    width: 33.33%;
+    float: right;
+    background-color: red;
+    height: 100%;
+}
+
+footer div#print {
+    width: 33.33%;
+    float: right;
+    background-color: slategray;
+    height: 100%;
+}
+
+footer div#clear:hover {
+    background-color: darkred;
+    transition: 0.4s ease;
+}
+
+footer div#info:hover {
+    background-color: darkgreen;
+    transition: 0.4s ease;
+}
+
+footer div#print:hover {
+    background-color: darkgray;
+    transition: 0.4s ease;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 6;
+    /* Sit on top */
+    padding-top: 10px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 90vh;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    text-align: center;
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #1976D2;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    text-align: center;
+}
+
+.modal-body h3 {
+    padding-bottom: 30px;
+    padding-top: 40px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.logo {
+    padding-left: 25%;
+    padding-top: 5%;
+    padding-right: 25%;
+    width: 80%;
+}
+
+@media only screen and (max-width: 470px) {
+    html{
+        font-size:15px;
+    }
+    
+    header{
+        padding-top:10px;
+        height:70px;
+    }
+    ul{
+        margin-top: 70px;
+        padding: 0;
+    }
+    ul li{
+        padding-top: 12px;
+    height: 60px;
+        padding-left: 12px;
+    }
+    
+    ul li .btnGroup button #delete{
+            font-size: 35px;
+    }
+    ul li .btnGroup button #done{
+            font-size: 35px;
+    }
+    
+    .modal-body h3{
+            padding-bottom: 20px;
+    padding-top: 12px;
+    }
+    
+    .modal-body p{
+            font-size: 14px;
+    text-align: left;
+    
+    }
+    
+    .modal-body p:nth-child(odd){
+            padding-top: 8px
+        
+    }
+
+    
+}
+
